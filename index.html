@@ -32,10 +32,10 @@ section{padding:90px 5vw}h2{font-size:clamp(30px,5vw,56px);line-height:1.1;font-
 .card div.t{padding:18px 22px 24px}.card p{color:var(--mut);font-size:14px}
 .rv{opacity:0;transform:translateY(50px) rotateX(8deg);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
 footer{padding:60px 5vw;border-radius:56px 56px 0 0;background:var(--card);text-align:center}footer a{color:var(--ac)}
-#adm{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 5vw 80px;display:none}#adm.on{display:block}
+#adm{position:fixed;inset:0;z-index:100;background:var(--bg);overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 5vw 80px;display:none}#adm.on{display:block}
 #adm fieldset{border:1px solid #444;border-radius:14px;padding:12px;margin:10px 0}#adm label{display:block;font-size:12px;color:var(--mut);margin-top:8px}
 #adm input,#adm textarea{width:100%;background:var(--card);color:var(--fg);border:1px solid #444;border-radius:10px;padding:9px;font:inherit}
-#adm .bar{position:sticky;top:0;display:flex;gap:10px;justify-content:space-between;padding:10px 0;background:var(--bg);z-index:2}
+#adm .bar{position:sticky;top:calc(-1 * env(safe-area-inset-top,0px));display:flex;gap:10px;justify-content:space-between;padding:10px 0;background:var(--bg);z-index:2}
 .sm{background:#333;color:#fff;border:0;border-radius:8px;padding:6px 12px;cursor:pointer;margin:6px 6px 0 0}
 i.ch{font-style:normal;display:inline-block;opacity:0;transform:translateY(70%) rotateX(-90deg);animation:chin .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*38ms);animation-play-state:paused}
 .sp.in i.ch{animation-play-state:running}@keyframes chin{to{opacity:1;transform:none}}
@@ -65,8 +65,8 @@ main{display:none}main:not([data-pg=accueil]){padding-top:90px;min-height:85vh}
 .bigc{font-size:clamp(40px,9vw,120px)}.cl{font-size:clamp(20px,3vw,34px);margin:30px 0}.cl a{color:var(--fg);text-decoration:none;border-bottom:2px solid var(--ac)}
 .card .im{aspect-ratio:4/3}.card img{object-position:top}
 .bgr{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;position:relative;z-index:30;flex-direction:column;justify-content:center;gap:6px;align-items:center}.bgr i{display:block;width:26px;height:3px;border-radius:3px;background:#fff;transition:.35s}.bgr.x i:nth-child(1){transform:translateY(9px) rotate(45deg)}.bgr.x i:nth-child(2){opacity:0}.bgr.x i:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
-#gate{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.82);display:grid;place-items:center}#gate div.bx{background:var(--card);color:var(--fg);border-radius:20px;padding:26px;width:min(90vw,380px);display:grid;gap:12px}#gate input{background:var(--bg);color:var(--fg);border:1px solid #555;border-radius:10px;padding:12px;font:inherit;width:100%}
-.toast{position:fixed;left:50%;bottom:calc(30px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ac);color:#fff;padding:12px 20px;border-radius:30px;z-index:99;font-weight:600}
+#gate{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.82);display:grid;place-items:center}#gate div.bx{background:var(--card);color:var(--fg);border-radius:20px;padding:26px;width:min(90vw,380px);display:grid;gap:12px}#gate input{background:var(--bg);color:var(--fg);border:1px solid #555;border-radius:10px;padding:12px;font:inherit;width:100%}
+.toast{position:fixed;left:50%;bottom:calc(30px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ac);color:#fff;padding:12px 20px;border-radius:30px;z-index:120;font-weight:600}
 nav{z-index:60}nav.mo{background:transparent;backdrop-filter:none}
 #mm{position:fixed;inset:0;z-index:40;display:none;background:linear-gradient(160deg,#ff6a2f 0%,#c4300f 45%,#140805 100%);color:#fff;overflow-y:auto;padding:calc(90px + env(safe-area-inset-top,0px)) 8vw calc(30px + env(safe-area-inset-bottom,0px))}
 #mm.open{display:block;animation:mmin .5s cubic-bezier(.2,.8,.2,1)}@keyframes mmin{from{opacity:0;clip-path:circle(0% at 92% 4%)}to{opacity:1;clip-path:circle(150% at 92% 4%)}}
